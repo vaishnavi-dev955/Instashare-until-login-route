@@ -1,0 +1,267 @@
+@media screen and (max-width: 576px) {
+  .Desktop-container {
+    display: none;
+  }
+  .mobile-Header-list-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    height: 40px;
+    width: 100vw;
+    background-color: #ffffff;
+  }
+
+  .header1 {
+    display: flex;
+  }
+
+  .InstaShare-header-logo {
+    width: 75px;
+    height: 35px;
+    padding-left: 25px;
+    padding-top: 10px;
+  }
+  .list-button {
+    height: 20px;
+    width: 45px;
+    border: 0px solid;
+    background-color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: #ffffff;
+    font-family: 'Roboto';
+    margin-right: 5px;
+  }
+  .logout-button {
+    background-color: #4094ef;
+    height: 20px;
+    width: 50px;
+    border: 0px solid;
+    font-size: 13px;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: 'Roboto';
+  }
+  .header-heading {
+    color: #262626;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Roboto';
+    padding-left: 15px;
+  }
+  .menu-logo {
+    height: 18px;
+    width: 20px;
+  }
+  .pop-up-content {
+    height: 10vh;
+    width: 60vw;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+  }
+  .close-button-logo {
+    height: 25px;
+    width: 25px;
+    color: #151515;
+  }
+  .close-button {
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border: 0px solid;
+    margin-top: 10px;
+  }
+  .menu-button {
+    height: 20px;
+    width: 22px;
+    border: 0px solid;
+    background-color: transparent;
+    margin-top: 10px;
+    margin-right: 3px;
+  }
+  .buttons-container {
+    display: flex;
+    height: 40px;
+    width: 200px;
+    background-color: #ffffff;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Desktop-container {
+    display: none;
+  }
+  .mobile-Header-list-container {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    height: 40px;
+    width: 100vw;
+    background-color: #ffffff;
+  }
+
+  .header1 {
+    display: flex;
+  }
+
+  .InstaShare-header-logo {
+    width: 75px;
+    height: 35px;
+    padding-left: 25px;
+    padding-top: 10px;
+  }
+  .list-button {
+    height: 20px;
+    width: 45px;
+    border: 0px solid;
+    background-color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: #ffffff;
+    font-family: 'Roboto';
+    margin-right: 5px;
+  }
+  .logout-button {
+    background-color: #4094ef;
+    height: 20px;
+    width: 50px;
+    border: 0px solid;
+    font-size: 13px;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: 'Roboto';
+  }
+  .header-heading {
+    color: #262626;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Roboto';
+    padding-left: 15px;
+  }
+  .menu-logo {
+    height: 18px;
+    width: 20px;
+  }
+  .pop-up-content {
+    height: 10vh;
+    width: 60vw;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+  }
+  .close-button-logo {
+    height: 25px;
+    width: 25px;
+    color: #151515;
+  }
+  .close-button {
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border: 0px solid;
+    margin-top: 10px;
+  }
+  .menu-button {
+    height: 20px;
+    width: 22px;
+    border: 0px solid;
+    background-color: transparent;
+    margin-top: 10px;
+    margin-right: 3px;
+  }
+  .buttons-container {
+    display: flex;
+    height: 40px;
+    width: 200px;
+    background-color: #ffffff;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-Header-list-container {
+    display: none;
+  }
+  .Desktop-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
+    height: 64px;
+    width: 100vw;
+    background-color: #ffffff;
+  }
+
+  .desk-header {
+    display: flex;
+  }
+
+  .desktop-InstaShare-header-logo {
+    width: 85px;
+    height: 45px;
+    padding-left: 25px;
+    padding-top: 10px;
+  }
+
+  .Header-input-style {
+    height: 35px;
+    width: 230px;
+    color: #989898;
+    border: 2px #989898 solid;
+    padding-left: 12px;
+    font-size: 15px;
+    background-color: #ffffff;
+    margin-top: 17px;
+  }
+  .search-button {
+    height: 35px;
+    width: 35px;
+    background-color: #ffffff;
+    border: 2px #989898 solid;
+    margin-top: 18px;
+    opacity: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 80%;
+  }
+  .search-style {
+    height: 32px;
+    width: 32px;
+  }
+  .search-container {
+    display: flex;
+  }
+
+  .desktop-heading {
+    color: #262626;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Roboto';
+    padding-left: 15px;
+  }
+  .Home-profile-button {
+    height: 30px;
+    width: 100px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #ffffff;
+    color: #262626;
+    border: 0px solid;
+    margin-right: 10px;
+    margin-top: 13px;
+  }
+  .Desktop-logout-button {
+    height: 30px;
+    width: 120px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #4094ef;
+    color: #ffffff;
+    border: 0px solid;
+    margin-right: 10px;
+    border-radius: 10px;
+    margin-top: 13px;
+  }
+}
