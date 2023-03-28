@@ -1,0 +1,205 @@
+.Home-container {
+  text-align: center;
+}
+.failure-Stories-image {
+  width: 260px;
+  height: 127px;
+}
+.failure-stories-heading {
+  font-size: 16px;
+  font-weight: bold;
+  color: #262626;
+  font-family: 'Roboto';
+}
+.failure-story-button {
+  width: 102px;
+  height: 32px;
+  background-color: #4094ef;
+  border-radius: 8px;
+  border: 0px solid;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 12px;
+  font-family: 'Roboto';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Failure-story-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.story-para {
+  font-size: 14px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  color: #262626;
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.All-posts-container {
+  background-color: #ffffff;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+}
+
+.slick-container {
+  width: 90%;
+  max-width: 1100px;
+  margin-top: 10px;
+}
+
+.logo-image {
+  margin: 5px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: #4094ef;
+}
+.failure-posts-image {
+  width: 40x;
+  height: 25px;
+}
+.failure-posts-heading {
+  font-size: 16px;
+  font-weight: 400;
+  color: #262626;
+  font-family: 'Roboto';
+}
+.failure-posts-button {
+  width: 102px;
+  height: 32px;
+  background-color: #4094ef;
+  border-radius: 8px;
+  border: 0px solid;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 14px;
+  font-family: 'Roboto';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Failure-post-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .Home-container {
+    text-align: center;
+  }
+  .failure-Stories-image {
+    width: 260px;
+    height: 127px;
+  }
+  .failure-stories-heading {
+    font-size: 32px;
+    font-weight: 400;
+    color: #262626;
+    font-family: 'Roboto';
+  }
+  .failure-story-button {
+    width: 127px;
+    height: 32px;
+    background-color: #4094ef;
+    border-radius: 12px;
+    border: 0px solid;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 12px;
+    font-family: 'Roboto';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .Failure-story-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slick-container {
+    width: 90%;
+    max-width: 1100px;
+    margin-top: 10px;
+  }
+
+  .logo-image {
+    margin: 5px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    color: #4094ef;
+  }
+  .story-para {
+    font-size: 14px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    color: #262626;
+  }
+  .failure-posts-image {
+    width: 70px;
+    height: 50px;
+  }
+  .failure-posts-heading {
+    font-size: 32px;
+    font-weight: 400;
+    color: #262626;
+    font-family: 'Roboto';
+  }
+  .failure-posts-button {
+    width: 127px;
+    height: 32px;
+    background-color: #4094ef;
+    border-radius: 12px;
+    border: 0px solid;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Roboto';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .Failure-post-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .All-posts-container {
+    background-color: #ffffff;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: scroll;
+  }
+}

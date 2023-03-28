@@ -1,8 +1,5 @@
 @media screen and (max-width: 576px) {
-  .Desktop-container {
-    display: none;
-  }
-  .mobile-Header-list-container {
+  .light-Header-list-container {
     display: flex;
     justify-content: space-between;
     align-items: space-between;
@@ -11,6 +8,14 @@
     background-color: #ffffff;
   }
 
+  .Dark-Header-list-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    height: 40px;
+    width: 100vw;
+    background-color: #262626;
+  }
   .header1 {
     display: flex;
   }
@@ -20,17 +25,6 @@
     height: 35px;
     padding-left: 25px;
     padding-top: 10px;
-  }
-  .list-button {
-    height: 20px;
-    width: 45px;
-    border: 0px solid;
-    background-color: #ffffff;
-    font-size: 13px;
-    font-weight: 500;
-    background-color: #ffffff;
-    font-family: 'Roboto';
-    margin-right: 5px;
   }
   .logout-button {
     background-color: #4094ef;
@@ -80,20 +74,16 @@
     margin-top: 10px;
     margin-right: 3px;
   }
-  .buttons-container {
-    display: flex;
-    height: 40px;
-    width: 200px;
-    background-color: #ffffff;
+  .search-container {
+    display: none;
+  }
+  .large-buttons-container {
+    display: none;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .Desktop-container {
-    display: none;
-  }
-  .mobile-Header-list-container {
-    list-style-type: none;
+  .Header-list-container {
     display: flex;
     justify-content: space-between;
     align-items: space-between;
@@ -111,17 +101,6 @@
     height: 35px;
     padding-left: 25px;
     padding-top: 10px;
-  }
-  .list-button {
-    height: 20px;
-    width: 45px;
-    border: 0px solid;
-    background-color: #ffffff;
-    font-size: 13px;
-    font-weight: 500;
-    background-color: #ffffff;
-    font-family: 'Roboto';
-    margin-right: 5px;
   }
   .logout-button {
     background-color: #4094ef;
@@ -171,19 +150,23 @@
     margin-top: 10px;
     margin-right: 3px;
   }
-  .buttons-container {
-    display: flex;
-    height: 40px;
-    width: 200px;
-    background-color: #ffffff;
+  .search-container {
+    display: none;
+  }
+  .large-buttons-container {
+    display: none;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .mobile-Header-list-container {
+  .pop-up-content {
     display: none;
   }
-  .Desktop-container {
+  .menu-button {
+    display: none;
+  }
+
+  .Header-list-container {
     display: flex;
     justify-content: space-around;
     align-items: space-around;
@@ -192,11 +175,11 @@
     background-color: #ffffff;
   }
 
-  .desk-header {
+  .header1 {
     display: flex;
   }
 
-  .desktop-InstaShare-header-logo {
+  .InstaShare-header-logo {
     width: 85px;
     height: 45px;
     padding-left: 25px;
@@ -234,7 +217,7 @@
     display: flex;
   }
 
-  .desktop-heading {
+  .header-heading {
     color: #262626;
     font-size: 20px;
     font-weight: 500;
@@ -263,5 +246,8 @@
     margin-right: 10px;
     border-radius: 10px;
     margin-top: 13px;
+  }
+  .large-buttons-container {
+    display: flex;
   }
 }
