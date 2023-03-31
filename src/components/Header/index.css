@@ -1,20 +1,52 @@
 @media screen and (max-width: 576px) {
-  .light-Header-list-container {
+  .small-input-type {
+    width: 245px;
+    height: 35px;
+    font-size: 16px;
+    color: #989898;
+    background-color: #ffffff;
+    font-weight: 300;
+    border: 1px #989898 solid;
+    margin-top: 15px;
+  }
+  .small-search-button {
+    height: 35px;
+    width: 35px;
+    border: 1px #989898 solid;
     display: flex;
-    justify-content: space-between;
-    align-items: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  }
+  .small-search-icon {
+    height: 18px;
+    width: 18px;
+    color: #989898;
+  }
+  .small-search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Header-list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: space-around;
     height: 40px;
     width: 100vw;
     background-color: #ffffff;
   }
 
-  .Dark-Header-list-container {
+  .click-Menu-Header-list-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: space-between;
-    height: 40px;
+    height: 100px;
     width: 100vw;
-    background-color: #262626;
+    background-color: #ffffff;
   }
   .header1 {
     display: flex;
@@ -25,6 +57,41 @@
     height: 35px;
     padding-left: 25px;
     padding-top: 10px;
+  }
+  .Home-button {
+    background-color: #ffffff;
+    height: 20px;
+    width: 50px;
+    border: 0px solid;
+    font-size: 13px;
+    color: #262626;
+    font-weight: 500;
+    font-family: 'Roboto';
+    margin-right: 5px;
+  }
+  .profile-button {
+    background-color: #ffffff;
+    height: 20px;
+    width: 50px;
+    border: 0px solid;
+    font-size: 13px;
+    color: #262626;
+    font-weight: 500;
+    font-family: 'Roboto';
+    margin-top: 3px;
+    margin-right: 5px;
+  }
+  .search-button {
+    background-color: #ffffff;
+    height: 20px;
+    width: 50px;
+    border: 0px solid;
+    font-size: 13px;
+    color: #262626;
+    font-weight: 500;
+    font-family: 'Roboto';
+    margin-top: 3px;
+    margin-right: 5px;
   }
   .logout-button {
     background-color: #4094ef;
@@ -47,12 +114,18 @@
     height: 18px;
     width: 20px;
   }
-  .pop-up-content {
+  .options-container {
     height: 10vh;
     width: 60vw;
     background-color: #ffffff;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .options-styling-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .close-button-logo {
     height: 25px;
@@ -74,24 +147,18 @@
     margin-top: 10px;
     margin-right: 3px;
   }
-  .search-container {
+
+  .large-main-container {
     display: none;
   }
-  .large-buttons-container {
-    display: none;
+  .sub-header-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .Header-list-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: space-between;
-    height: 40px;
-    width: 100vw;
-    background-color: #ffffff;
-  }
-
   .header1 {
     display: flex;
   }
@@ -102,6 +169,61 @@
     padding-left: 25px;
     padding-top: 10px;
   }
+  .Header-list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: space-around;
+    height: 40px;
+    width: 100vw;
+    background-color: #ffffff;
+  }
+
+  .click-Menu-Header-list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-between;
+    height: 100px;
+    width: 100vw;
+    background-color: #ffffff;
+  }
+  .Home-button {
+    background-color: #ffffff;
+    height: 20px;
+    width: 50px;
+    border: 0px solid;
+    font-size: 13px;
+    color: #262626;
+    font-weight: 500;
+    font-family: 'Roboto';
+    margin-right: 5px;
+  }
+  .profile-button {
+    background-color: #ffffff;
+    height: 20px;
+    width: 50px;
+    border: 0px solid;
+    font-size: 13px;
+    color: #262626;
+    font-weight: 500;
+    font-family: 'Roboto';
+    margin-top: 3px;
+    margin-right: 5px;
+  }
+  .search-button {
+    background-color: #ffffff;
+    height: 20px;
+    width: 50px;
+    border: 0px solid;
+    font-size: 13px;
+    color: #262626;
+    font-weight: 500;
+    font-family: 'Roboto';
+    margin-top: 3px;
+    margin-right: 5px;
+  }
+
   .logout-button {
     background-color: #4094ef;
     height: 20px;
@@ -111,6 +233,8 @@
     color: #ffffff;
     font-weight: 500;
     font-family: 'Roboto';
+    margin-top: 3px;
+    margin-right: 5px;
   }
   .header-heading {
     color: #262626;
@@ -123,12 +247,19 @@
     height: 18px;
     width: 20px;
   }
-  .pop-up-content {
+  .options-container {
     height: 10vh;
     width: 60vw;
     background-color: #ffffff;
     display: flex;
-    flex-direction: row;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  .options-styling-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .close-button-logo {
     height: 25px;
@@ -150,16 +281,18 @@
     margin-top: 10px;
     margin-right: 3px;
   }
-  .search-container {
+  .large-main-container {
     display: none;
   }
-  .large-buttons-container {
-    display: none;
+  .sub-header-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .pop-up-content {
+  .options-styling-container {
     display: none;
   }
   .menu-button {
@@ -194,12 +327,12 @@
     padding-left: 12px;
     font-size: 15px;
     background-color: #ffffff;
-    margin-top: 17px;
+    margin-top: 18px;
   }
-  .search-button {
+  .search-icon-button {
     height: 35px;
     width: 35px;
-    background-color: #ffffff;
+    background-color: #989898;
     border: 2px #989898 solid;
     margin-top: 18px;
     opacity: 50%;
@@ -210,8 +343,8 @@
     opacity: 80%;
   }
   .search-style {
-    height: 32px;
-    width: 32px;
+    height: 20px;
+    width: 20px;
   }
   .search-container {
     display: flex;
@@ -233,7 +366,7 @@
     color: #262626;
     border: 0px solid;
     margin-right: 10px;
-    margin-top: 13px;
+    margin-top: 15px;
   }
   .Desktop-logout-button {
     height: 30px;
@@ -245,9 +378,15 @@
     border: 0px solid;
     margin-right: 10px;
     border-radius: 10px;
-    margin-top: 13px;
+    margin-top: 15px;
   }
   .large-buttons-container {
+    display: flex;
+  }
+  .large-main-container {
+    display: flex;
+  }
+  .sub-header-container {
     display: flex;
   }
 }

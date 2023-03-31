@@ -1,11 +1,13 @@
 import {Component} from 'react'
+import {Redirect} from 'react-router-dom'
 
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 import Slider from 'react-slick'
 
 import Header from '../Header'
-import PostItem from '../PostItem'
+import PostsContainer from '../PostsContainer'
+import InstaShareContext from '../../Context/InstaShareContext'
 
 import './index.css'
 
@@ -47,16 +49,14 @@ const settings = {
   ],
 }
 
-class Home extends Component {
+class StoriesContainer extends Component {
   state = {
     userStoriesData: [],
     apiStatus: apiConstants.initial,
-    userPostsData: [],
   }
 
   componentDidMount() {
     this.getUserStoriesData()
-    this.getSharePostsData()
   }
 
   getUserStoriesData = async () => {
@@ -89,62 +89,13 @@ class Home extends Component {
     }
   }
 
-  getSharePostsData = async () => {
-    this.setState({apiStatus: apiConstants.inProgress})
-    const apiUrl = 'https://apis.ccbp.in/insta-share/posts'
-    const jwtToken = Cookies.get('jwt_token')
-    const options = {
-      headers: {
-        Authorization: `Bearer ${jwtToken}`,
-      },
-      method: 'GET',
-    }
-    const response = await fetch(apiUrl, options)
-    console.log(response)
-    if (response.ok === true) {
-      const data = await response.json()
-      console.log(data)
-      const updatedPostDetails = Item => {
-        const updatedDetails = {
-          caption: Item.caption,
-          imageUrl: Item.image_url,
-        }
-        return updatedDetails
-      }
-      const UpdatedPostsData = data.posts.map(eachItem => ({
-        comments: eachItem.comments.map(each => ({
-          comment: each.comment,
-          commentUserId: each.user_id,
-          username: each.user_name,
-        })),
-        createdAt: eachItem.created_at,
-        postDetails: updatedPostDetails(eachItem.post_details),
-        postId: eachItem.post_id,
-        profilePic: eachItem.profile_pic,
-        userId: eachItem.user_id,
-        userName: eachItem.user_name,
-      }))
-      this.setState({
-        userPostsData: UpdatedPostsData,
-        apiStatus: apiConstants.success,
-      })
-      console.log(UpdatedPostsData)
-    } else {
-      this.setState({apiStatus: apiConstants.failure})
-    }
-  }
-
   onStoryLoadingView = () => (
     <div data-testid="loader">
       <Loader type="TailSpin" color="#00BFFF" height={50} width={50} />
     </div>
   )
 
-  onPostLoadingView = () => (
-    <div data-testid="loader">
-      <Loader type="TailSpin" color="#00BFFF" height={50} width={50} />
-    </div>
-  )
+  onClickStoryTryAgainButton = () => this.getUserStoriesData()
 
   onStoryFailureView = () => (
     <div className="Failure-story-container">
@@ -153,26 +104,14 @@ class Home extends Component {
         alt="failure view"
         className="failure-Stories-image"
       />
-      <h1 className="failure-stories-heading">
-        Something went wrong . Please try again{' '}
-      </h1>
-      <button className="failure-story-button" type="button">
-        Try again
-      </button>
-    </div>
-  )
-
-  onPostFailureView = () => (
-    <div className="Failure-post-container">
-      <img
-        src="https://res.cloudinary.com/drus1cyt4/image/upload/v1680027056/Icon_aw2vjm.png"
-        alt="failure view"
-        className="failure-posts-image"
-      />
-      <h1 className="failure-posts-heading">
-        Something went wrong . Please try again{' '}
-      </h1>
-      <button className="failure-posts-button" type="button">
+      <p className="failure-stories-heading">
+        Something went wrong. Please try again
+      </p>
+      <button
+        className="failure-story-button"
+        type="button"
+        onClick={this.onClickStoryTryAgainButton}
+      >
         Try again
       </button>
     </div>
@@ -197,17 +136,6 @@ class Home extends Component {
     )
   }
 
-  successPostsView = () => {
-    const {userPostsData} = this.state
-    return (
-      <ul className="All-posts-container">
-        {userPostsData.map(eachItem => (
-          <PostItem PostItemData={eachItem} key={eachItem.postId} />
-        ))}
-      </ul>
-    )
-  }
-
   renderingStoryViews = () => {
     const {apiStatus} = this.state
     switch (apiStatus) {
@@ -222,34 +150,30 @@ class Home extends Component {
     }
   }
 
-  renderingPostsViews = () => {
-    const {apiStatus} = this.state
-    switch (apiStatus) {
-      case apiConstants.success:
-        return this.successPostsView()
-      case apiConstants.failure:
-        return this.onPostFailureView()
-      case apiConstants.inProgress:
-        return this.onPostLoadingView()
-      default:
-        return null
-    }
-  }
-
   render() {
-    const {userStoriesData, userPostsData} = this.state
-    console.log(`userStoriesData is ${userStoriesData}`)
-    console.log(`userPostsData is ${userPostsData}`)
-    return (
-      <>
-        <Header />
-        <div className="main-container">
-          {this.renderingStoryViews()}
-          {this.renderingPostsViews()}
-        </div>
-      </>
-    )
+    return <>{this.renderingStoryViews()}</>
   }
 }
+
+const Home = () => (
+  <InstaShareContext.Consumer>
+    {value => {
+      const {searchInput} = value
+      const jwtToken = Cookies.get('jwt_token')
+      if (jwtToken === undefined) {
+        return <Redirect to="/login" />
+      }
+      return (
+        <>
+          <Header />
+          <div className="main-container">
+            <StoriesContainer />
+            <PostsContainer searchInput={searchInput} />
+          </div>
+        </>
+      )
+    }}
+  </InstaShareContext.Consumer>
+)
 
 export default Home
