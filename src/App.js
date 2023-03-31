@@ -34,6 +34,12 @@ class App extends Component {
     this.setState({searchInput: Input})
   }
 
+  clickingSearchButton = () => {
+    this.setState(prevState => ({
+      onClickSearchButton: !prevState.onClickSearchButton,
+    }))
+  }
+
   render() {
     const {
       isMenuClick,
@@ -53,6 +59,7 @@ class App extends Component {
           onClickClose: this.onClickClose,
           onClickSmallSearchButton: this.onClickSmallSearchButton,
           onSearchResult: this.onSearchResult,
+          clickingSearchButton: this.clickingSearchButton,
         }}
       >
         <Switch>

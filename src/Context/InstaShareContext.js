@@ -8,6 +8,8 @@ const InstaShareContext = React.createContext({
   onClickSmallSearchButton: () => {},
   onSearchResult: () => {},
   searchInput: '',
+  clickingSearchButton: () => {},
+  onClickSearchButton: false,
 })
 
 export default InstaShareContext

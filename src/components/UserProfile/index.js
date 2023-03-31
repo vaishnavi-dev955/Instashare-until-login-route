@@ -112,6 +112,34 @@ class UserProfile extends Component {
               <p className="bio-description">{userBio}</p>
             </div>
           </div>
+          <div className="userProfile-Desktop-container">
+            <div className="image-Desktop-followers-container">
+              <img
+                src={profilePic}
+                alt="user profile"
+                className="user-profile-Desktop-image"
+              />
+              <div className="posts-followers-following-desktop-container">
+                <p className="userProfile-Desktop-heading">{userName}</p>
+                <div className="All-options-container">
+                  <div className="posts-desktop-container">
+                    <p className="desktop-description1">{postsCount}</p>
+                    <p className="desktop-description2">posts</p>
+                  </div>
+                  <div className="followers-desktop-container">
+                    <p className="desktop-description1">{followersCount}</p>
+                    <p className="desktop-description2">followers</p>
+                  </div>
+                  <div className="following-desktop-container">
+                    <p className="desktop-description1">{followingCount}</p>
+                    <p className="desktop-description2">following</p>
+                  </div>
+                </div>
+                <p className="userId-desktop-heading">{userProfileId}</p>
+                <p className="bio-desktop-description">{userBio}</p>
+              </div>
+            </div>
+          </div>
 
           <ul className="stories-container">
             {stories.map(eachItem => (

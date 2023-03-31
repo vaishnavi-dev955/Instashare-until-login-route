@@ -26,6 +26,7 @@ const Header = props => {
           onClickSmallSearchButton,
           onSearchResult,
           searchInput,
+          clickingSearchButton,
         } = value
         const onClickHamBergerMenu = () => onClickHamBerger()
         const onClickCloseButton = () => onClickClose()
@@ -105,7 +106,11 @@ const Header = props => {
                       onChange={onChangeEvent}
                       value={searchInput}
                     />
-                    <button type="button" className="search-icon-button">
+                    <button
+                      type="button"
+                      className="search-icon-button"
+                      onClick={clickingSearchButton}
+                    >
                       <FaSearch className="search-style" />
                     </button>
                   </div>
@@ -141,7 +146,11 @@ const Header = props => {
                   onChange={onChangeEvent}
                   value={searchInput}
                 />
-                <button type="button" className="small-search-button">
+                <button
+                  type="button"
+                  className="small-search-button"
+                  onClick={clickingSearchButton}
+                >
                   <FaSearch className="small-search-icon" />
                 </button>
               </div>

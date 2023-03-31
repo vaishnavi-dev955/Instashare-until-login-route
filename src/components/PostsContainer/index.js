@@ -31,16 +31,30 @@ const CommentItem = props => {
 }
 
 class PostsContainer extends Component {
-  state = {userPostsData: []}
+  state = {userPostsData: [], searchStatus: false}
 
   componentDidMount() {
     this.getSharePostsData()
+    this.timerid = setInterval(() => {
+      const {onClickSearchButton} = this.props
+      const {searchStatus} = this.state
+      if (onClickSearchButton !== searchStatus) {
+        this.setState({searchStatus: onClickSearchButton})
+        this.getSharePostsData()
+      }
+    }, 1000)
   }
 
   getSharePostsData = async () => {
-    const {searchInput} = this.props
+    const {searchInput, onClickSearchButton} = this.props
+    console.log('called again')
     this.setState({apiStatus: apiConstants.inProgress})
-    const apiUrl = `https://apis.ccbp.in/insta-share/posts?search=${searchInput}`
+    let apiUrl = ''
+    if (searchInput !== '' && onClickSearchButton === true) {
+      apiUrl = `https://apis.ccbp.in/insta-share/posts?search=${searchInput}`
+    } else {
+      apiUrl = 'https://apis.ccbp.in/insta-share/posts'
+    }
     const jwtToken = Cookies.get('jwt_token')
     const options = {
       headers: {

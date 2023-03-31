@@ -158,7 +158,7 @@ class StoriesContainer extends Component {
 const Home = () => (
   <InstaShareContext.Consumer>
     {value => {
-      const {searchInput} = value
+      const {searchInput, onClickSearchButton} = value
       const jwtToken = Cookies.get('jwt_token')
       if (jwtToken === undefined) {
         return <Redirect to="/login" />
@@ -168,7 +168,10 @@ const Home = () => (
           <Header />
           <div className="main-container">
             <StoriesContainer />
-            <PostsContainer searchInput={searchInput} />
+            <PostsContainer
+              searchInput={searchInput}
+              onClickSearchButton={onClickSearchButton}
+            />
           </div>
         </>
       )
